@@ -1,0 +1,18 @@
+<%= form_for([@lesson, @video]) do |f| %>
+<%= render 'shared/error_messages', :object => f.object %>
+<div class="field">
+  <%= f.label :youtube_identifier %><br />
+  <%= f.text_field :youtube_id %>
+</div>
+<div class="field">
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_field :description %>
+</div>
+<div class="actions">
+  <%= f.submit "Sign up" %>
+</div>
+<% end %>

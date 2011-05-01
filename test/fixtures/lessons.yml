@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: Lesson 1 Learn to relax
+  description: Learn to relax and be a master!
+  course_id: 1
+
+two:
+  id: 2
+  name: Lesson 2 Take the plunge
+  description: Take the leap of faith!
+  course_id : 1
+
+three:
+  id: 3
+  name: Lesson 1 Blues in C Scale
+  description: Learn how to play blues piano in C
+  course_id : 3
+
+four:
+  id: 4
+  name: Lesson 2 Blues in G Scale
+  description: Learn how to play blues piano in G
+  course_id : 3
+
+five:
+  id: 5
+  name: Lesson 1 Jump!
+  description: To start a business you need to know how to jump!
+  course_id : 2

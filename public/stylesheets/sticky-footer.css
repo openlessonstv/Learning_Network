@@ -1,0 +1,40 @@
+/* sticky-footer.css */
+
+*
+{
+    margin: 0;
+}
+
+html, body
+{
+    height: 100%;
+    background: #eee;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#main
+{
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+#footer
+{
+	color: white;
+    clear: both;
+    height: 140px !important;
+    margin-top: -160px !important; /* This is height + padding */
+}
+
+#push
+{
+	margin-top: 2em;
+    height: 160px; /* This is footer's height + padding */
+    background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#111));
+    border-top: 1px solid #333;
+
+
+}

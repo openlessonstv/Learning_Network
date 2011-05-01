@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: How to speak with confidence
+  description: A great course for speaking well!
+  published: true
+
+two:
+  id: 2
+  name: How to build an online business
+  description: Looking for starting business
+  published: true
+
+three:
+  id: 3
+  name: How to play blues scales on the piano
+  description: Learn how to play piano blues scales from A to G!
+  published: true

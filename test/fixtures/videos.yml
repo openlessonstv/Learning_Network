@@ -1,0 +1,129 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  youtube_id: 7MWaeOHDBOg
+  title: Relax before you speak
+  description: This is what this video is about
+  popularity: 9
+  lesson_id: 1
+
+two:
+  id: 2
+  youtube_id: eahjYz2685g
+  title: Relaxing before speaking
+  description: This is what this is about
+  popularity: 6
+  lesson_id: 1
+
+three:
+  id: 3
+  youtube_id: 1uyyMlKJvjk
+  title: Relaxing while spaking
+  description: This is what this is about
+  popularity: 4
+  lesson_id: 1
+
+four:
+  id: 4
+  youtube_id: FnMOHAm8FEw
+  title: Remember! Relax!
+  description: This is what this is about
+  popularity: 
+  lesson_id: 1
+
+five:
+  id: 5
+  youtube_id: nr-akYzF2Ow
+  title: Learn to take the plunge
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 2
+
+six:
+  id: 6
+  youtube_id: he3oJCFWET4
+  title: Taking the plunge!
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 2
+
+seven:
+  id: 7
+  youtube_id: 
+  title: z3WNcg4bhZY
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 2
+
+eight:
+  id: 8
+  youtube_id: Dt7z9HQwR7Q
+  title: Piano Blues in C
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 3
+
+nine:
+  id: 9
+  youtube_id: 7Inx-i6UgKo
+  title: Play Piano Blues in C
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 3
+
+ten:
+  id: 10
+  youtube_id: db3OkomNvUA
+  title: Lean how to do Piano Blues in C
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 3
+
+eleven:
+  id: 11
+  youtube_id: 6BGgw66C2Xc
+  title: Lean how to do Piano Blues in g
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 4
+
+twelve:
+  id: 12
+  youtube_id: qUb3y4Svzuc
+  title: Lean how to do Piano Blues in g
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 4
+
+thirteen:
+  id: 13
+  youtube_id: prqzZILYekU
+  title: Lean how to do Piano Blues in g
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 4
+
+fourteen:
+  id: 14
+  youtube_id: Jttm1ZAHd9c
+  title: Startups
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 5
+
+fifteen:
+  id: 15
+  youtube_id: _iXki2_695Y
+  title: Startups and building companies
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 5
+
+sixteen:
+  id: 16
+  youtube_id: OHTHvDXvvZk
+  title: Startup your startup now
+  description: This is what this is about
+  popularity: 1
+  lesson_id: 5

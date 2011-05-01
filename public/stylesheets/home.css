@@ -1,0 +1,289 @@
+/* @group Project */
+
+/* @group sidebar */
+
+#social-media-position {
+	margin-top: 0.3em;
+	margin-bottom: 2.5em;
+}
+
+#video-sidebar {
+	margin-left: 0.6em;
+}
+
+#video-sidebar h5{
+	font-size: 1.2em;
+	color: #555;
+	padding: 0;
+	margin-bottom: 1em;
+	line-height: 0.7em;
+}
+
+#video-sidebar h1 {
+	font-size: 1.8em;
+	color: orange;
+	margin-bottom: 0.15em;
+	margin-top: 0.4em;
+	margin-left: 0.1em;
+	margin-right: 0.3em;
+}
+
+#video-sidebar h4 a {
+	color: #98110b; 
+	text-decoration: none;
+}
+
+#video-sidebar h4 a:hover {
+	color: #98110b; 
+	text-decoration: underline;
+}
+
+#video-sidebar-course-name {
+}
+
+#video-sidebar h4{
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 0.6em;
+	line-height:1.2em
+}
+
+.arrow {
+}
+
+#arrow-position {
+	margin-bottom: 4em;
+	margin-top: 4em;
+	
+}
+
+#right-arrow {
+	margin-left: 1.5em;
+}
+
+#left-arrow {
+	margin-left: 1.6em;
+}
+
+
+
+/* @end */
+
+/* @group fold down menu */
+
+/*------------------------------------*\
+	NAV
+\*------------------------------------*/
+#nav{
+
+	float:left;
+	width:20%;
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:0px;
+	margin-left:-20px;
+	
+}
+#nav li{
+	float:left;
+	margin-right:5px;
+	position:relative;
+	display:block;
+}
+#nav li a{
+	color:#fff;
+	border-radius:0.1em;
+	padding: 1px 3px 1px 3px;
+	background: #ff9058;
+	text-decoration:none;
+
+}
+#nav li a:hover{
+	color:#fff;
+	background: #98110b; 
+
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	opacity:0; /* Set initial state to transparent */
+	-webkit-transition:0.25s linear opacity; /* Make the dropdown fade-in in Webkit */
+	width:110px;
+	border-radius:0.1em;
+	margin-left:0;
+	
+}
+#nav ul li{
+	padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+}
+#nav ul a{
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+	display:block;
+}
+#nav li:hover ul{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+	opacity:1; /* Fade to opaque */
+}
+#nav li:hover a{ /* Set styles for top level when dropdown is hovered */
+
+	background: #98110b; /* It'll look nice semi-transparent */
+}
+
+#nav li:hover ul a{ /* Override some top level styles when dropdown is hovered */
+	background: #ff9058;
+}
+#nav li:hover ul li a:hover{ /* Set styles for dropdown when items are hovered */
+
+	background: #98110b; /* It'll look nice semi-transparent */
+
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Header */
+
+#header-logo-position {
+	margin-top: 10px;
+}
+
+#header-facebook-position {
+	margin-top: 30px;
+}
+
+#header {
+	height: 100px;
+	background-repeat:repeat-x;
+}
+
+
+
+/* @end */
+
+/* @group Home */
+
+/* @group bottom */
+
+#youtube-position {
+	margin-left: 1.5em;
+}
+
+#bottom-content {
+margin-top: 2em;
+}
+
+#bottom-left{
+
+}
+
+#bottom-left h3{
+	margin-left: 0.8em;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	color: #98110b; 
+
+}
+/* @group Courses */
+
+#bottom-left-course {
+	margin-bottom: 1.3em;
+	margin-left: 1.2em;
+}
+
+
+#bottom-left-course h4{
+	margin-bottom: 0.3em;
+	font-weight: bold;
+	color: darkorange;
+	
+}
+
+#bottom-left-lesson {
+	margin-right: 1.9em;
+}
+#bottom-left-lesson a{
+	
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Middle-blue */
+
+.feature-buttons {
+	margin: 0.3em;
+}
+
+.feature-buttons-i{
+	margin-bottom: 0.6em;
+}
+
+#home-blue-banner-column {
+	padding: 0.5em;
+	background: -webkit-gradient(linear, left top, left bottom, from(#cee4ff), to(#9fa2ff));
+}
+
+#home-blue-banner-column h4{
+	font-weight:bold;
+	margin: 0.2em;
+	font-family:  Arial Rounded MT Bold;
+	margin-bottom: 1em;
+}
+
+#monsterlearn-position {
+	margin-top: 2em;
+}
+
+
+
+/* @end */
+
+/* @group Top */
+
+#home-signup-position {
+	margin-left: 3em;
+}
+
+#home-sign-up-column {
+	
+}
+#home-sign-up-column h2 {
+	margin-bottom: 0;
+	font-weight:bold;
+	font-size: 2.3em;
+	font-family:  Arial Rounded MT Bold;
+
+}
+
+#home-sign-up-column h1 {
+	font-weight:bold;
+	font-size: 2.9em;
+	font-family:  Arial Rounded MT Bold;
+	font-family:  Arial Rounded MT Bold;
+	margin-bottom:10px
+}
+#home-sign-up-column p {
+	font-size: 1.2em;
+	line-height:1.5em;
+	margin-bottom:15px;
+}
+
+/* @end */
+
+
+
+/* @end */
+

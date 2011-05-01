@@ -1,5 +1,7 @@
 class Video < ActiveRecord::Base
   belongs_to :lesson
+  belongs_to :user
+  
   default_scope :order => 'popularity desc'
 
   def url

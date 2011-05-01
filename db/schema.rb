@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110430171106) do
     t.string   "remember_token",     :limit => 128
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110430171106) do
     t.string   "description"
     t.integer  "popularity"
     t.integer  "lesson_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

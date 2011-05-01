@@ -6,6 +6,7 @@ class CreateVideos < ActiveRecord::Migration
       t.string :description
       t.integer :popularity
       t.integer :lesson_id
+      t.integer :user_id
 
       t.timestamps
     end

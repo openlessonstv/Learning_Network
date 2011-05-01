@@ -38,6 +38,8 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @course = @video.lesson.course
+    @lesson = @video.lesson
   end
 
   def edit

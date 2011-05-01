@@ -1,3 +1,7 @@
+#home-blue-banner-column h3{
+margin-bottom:0.2em;
+}
+
 /* @group Project */
 
 /* @group sidebar */
@@ -233,8 +237,8 @@ margin-top: 2em;
 }
 
 #home-blue-banner-column {
-	padding: 0.5em;
-	background: -webkit-gradient(linear, left top, left bottom, from(#cee4ff), to(#9fa2ff));
+padding:1em;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cee4ff), to(#9fa2ff));
 }
 
 #home-blue-banner-column h4{
@@ -261,20 +265,20 @@ margin-top: 2em;
 #home-sign-up-column {
 	
 }
+
 #home-sign-up-column h2 {
 	margin-bottom: 0;
-	font-weight:bold;
-	font-size: 2.3em;
-	font-family:  Arial Rounded MT Bold;
-
+    font-weight:bold;
+    font-size: 2.3em;
+    font-family:  Arial Rounded MT Bold;
 }
 
 #home-sign-up-column h1 {
 	font-weight:bold;
-	font-size: 2.9em;
-	font-family:  Arial Rounded MT Bold;
-	font-family:  Arial Rounded MT Bold;
-	margin-bottom:10px
+    font-size: 3.12em;
+    font-family:  Arial Rounded MT Bold;
+    font-family:  Arial Rounded MT Bold;
+    margin-bottom:10px
 }
 #home-sign-up-column p {
 	font-size: 1.2em;

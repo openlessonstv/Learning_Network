@@ -1,12 +1,6 @@
 <head>
 	<!-- STEP ONE: Insert this code into the HEAD section of your HTML document  -->
 
-	<script type="text/javascript">
-	var a = new Image(); a.src = '/images/project/arrow/arrow_left2.gif';
-	var b = new Image(); b.src = '/images/project/arrow/arrow_left2a.gif';
-	var c = new Image(); c.src = '/images/project/arrow/arrow_right2.gif';
-	var d = new Image(); d.src = '/images/project/arrow/arrow_right2a.gif';
-	</script>
 </head>
 
 
@@ -27,19 +21,35 @@
 		<div id="video-sidebar">
 			
 			<div id="video-sidebar-course-name">
-			<h4><%= @video.title %></h4>
-			 <h5>by <a href="url">Bobybob </a></h5>
+			<h4><%= @video.lesson.name %></h4>
+			 <h5>by <%= link_to @video.user.name, @video.user %> </h5>
 			</div>
 			
 	
 			<div id="arrow-position">
+				<% unless @course.lessons.first == @lesson %> 
 				<%= link_to image_tag('/images/project/arrow/arrow_left2.gif', :onmouseover=>"this.src='/images/project/arrow/arrow_left2a.gif'", :onmouseout=>"this.src='/images/project/arrow/arrow_left2.gif'", :class=>"arrow", :id =>"left-arrow"), lesson_path(@video.lesson.previous) %>
+				<% end %>
+				
+				<% unless @course.lessons.last == @lesson%>
 				<%= link_to image_tag('/images/project/arrow/arrow_right2.gif', :onmouseover=>"this.src='/images/project/arrow/arrow_right2a.gif'", :onmouseout=>"this.src='/images/project/arrow/arrow_right2.gif'", :class=>"arrow", :id =>"right-arrow"), lesson_path(@video.lesson.next)  %>
+				<% end %>
 			</div>
 			
-			
-			<h4><%= link_to @video.lesson.name, course_path(@video.lesson.course) %></h4>
-			
+				
+				<h4><%= link_to @video.lesson.course.name, course_path(@video.lesson.course) %></h4>
+			<div class="span-5 last">
+				<ul id="nav">
+					<li>
+						<h1><a href="#">23/45</a></h1>
+						<ul>
+							<% @course.lessons.each do |v| %>
+							<li><%= link_to (truncate(v.name, :length =>30)), v %></li>
+							<% end %>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	
@@ -56,12 +66,15 @@
 				
 				<div class="span-3" id="bottom-left-lesson">
 					<%= link_to image_tag (v.thumbnail_url), lesson_video_path(@video.lesson, v) %>
-					<a href="url">Bob's take'</a>
+					<%= link_to v.user.name, v.user %>
 				</div>
 				<% end %>
 			
 			<% end %>
 		</div>
+		
+		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=148282195232426&amp;xfbml=1"></script><fb:comments href=<%= @video.url %> num_posts="20" width="600"></fb:comments>
+		
 	</div>
 
 	<% end %>	

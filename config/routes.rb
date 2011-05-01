@@ -1,6 +1,6 @@
 Ol::Application.routes.draw do
   root :to => "pages#home"
-
+  resources :users
   resources :courses
   resources :lessons do
     resources :videos

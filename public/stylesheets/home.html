@@ -57,7 +57,6 @@
 								<div class="feature-buttons-i"><img src="images/btn_learn.png" alt="Big Boat" /></div>
 								<div class="feature-buttons-i"><img src="images/btn_teach.png" alt="Big Boat" /></div>
 								<div class="feature-buttons-i"><img src="images/btn_interact.png" alt="Big Boat" /></div>
-							
 							</div>
 							
 						</div>
@@ -77,7 +76,22 @@
 						<div class="span-11" id="bottom-left">
 							<h3> Check out the Most Popular Classes! </h3>
 							<div class="span-11" id="bottom-left-course">
-								<h4> Self Development </h4>
+																
+									<% @course.all.each do |c| %>
+									<h3> <%= c.lessons.first.name %> </h3>
+									
+									<% @course.lessons.each do |l| %>
+									<div class="span-3" id="bottom-left-lesson">
+										<%= link_to image_tag (l.videos.first.thumbnail_url), lesson_video_path(l.videos.first, l.videos.first) %>
+										<%= link_to v.lesson.name, v.lesson.videos.first %>
+									</div>
+									
+									<% end %>
+									<div class="span-3" id="bottom-left-lesson">
+									
+									</div>
+									
+									
 								<div class="span-3" id="bottom-left-lesson">
 									<img src="images/youtube/image1.jpg" alt="Big Boat" />
 									<a href="url">Great Video #1</a>
@@ -92,7 +106,6 @@
 								</div>
 							</div>
 							<div class="span-11" id="bottom-left-course">
-								<h4> Self Development </h4>
 								<div class="span-3" id="bottom-left-lesson">
 									<img src="images/youtube/image1.jpg" alt="Big Boat" />
 									<a href="url">Great Video #1</a>

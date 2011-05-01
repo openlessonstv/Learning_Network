@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: Darren
+  email: darren@sw.com
+
+
+one:
+  id: 2
+  name: John
+  email: john@sw.com
+
+one:
+  id: 3
+  name: Alan
+  email: alan@sw.com

@@ -1,6 +1,14 @@
+<head>
+	<!-- STEP ONE: Insert this code into the HEAD section of your HTML document  -->
 
-<p><%=  @video.lesson.name %> <%= link_to "(Full Course Details)", course_path(@video.lesson.course) %></p>
-<h1><%= @video.title %></h1>
+	<script type="text/javascript">
+	var a = new Image(); a.src = '/images/project/arrow/arrow_left2.gif';
+	var b = new Image(); b.src = '/images/project/arrow/arrow_left2a.gif';
+	var c = new Image(); c.src = '/images/project/arrow/arrow_right2.gif';
+	var d = new Image(); d.src = '/images/project/arrow/arrow_right2a.gif';
+	</script>
+</head>
+
 
 	<div class="span-19">
 		<div id="video-youtube-position">
@@ -8,7 +16,7 @@
 			  <object width="760" height="440">
 			    <param name="movie" value="<%=@video.url%>"></param>
 			    <param name="wmode" value="transparent"></param>
-			    <embed src="<%=@video.url%>" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
+			    <embed src="<%=@video.url%>" type="application/x-shockwave-flash" wmode="transparent" width="760" height="440"></embed>
 			  </object>
 			</div>
 		</div>
@@ -19,72 +27,42 @@
 		<div id="video-sidebar">
 			
 			<div id="video-sidebar-course-name">
-			<h4>Lesson: Breathing is Incredibly Important</h4>
+			<h4><%= @video.title %></h4>
 			 <h5>by <a href="url">Bobybob </a></h5>
 			</div>
 			
 	
 			<div id="arrow-position">
-				<a href="whatever" onmouseover="document.images['s1a'].src='images/project/arrow/arrow_left2a.gif';" onmouseout="document.images['s1a'].src='images/project/arrow/arrow_left2.gif';"><img src="images/project/arrow/arrow_left2.gif" name="s1a" border="0" class="arrow" id="left-arrow"></a>
-				<a href="whatever" onmouseover="document.images['s1c'].src='images/project/arrow/arrow_right2a.gif';" onmouseout="document.images['s1c'].src='images/project/arrow/arrow_right2.gif';"><img src="images/project/arrow/arrow_right2.gif" name="s1c" border="0" class="arrow" id="right-arrow"></a>
+				<%= link_to image_tag('/images/project/arrow/arrow_left2.gif', :onmouseover=>"this.src='/images/project/arrow/arrow_left2a.gif'", :onmouseout=>"this.src='/images/project/arrow/arrow_left2.gif'", :class=>"arrow", :id =>"left-arrow"), lesson_path(@video.lesson.previous) %>
+				<%= link_to image_tag('/images/project/arrow/arrow_right2.gif', :onmouseover=>"this.src='/images/project/arrow/arrow_right2a.gif'", :onmouseout=>"this.src='/images/project/arrow/arrow_right2.gif'", :class=>"arrow", :id =>"right-arrow"), lesson_path(@video.lesson.next)  %>
 			</div>
 			
 			
-			<h4><a href="url">Lessons in Leadership</a></h4>
+			<h4><%= link_to @video.lesson.name, course_path(@video.lesson.course) %></h4>
 			
 		</div>
 	</div>
-<%= link_to 'Previous Lesson', lesson_path(@video.lesson.previous) %>
-<%= link_to 'Next Lesson', lesson_path(@video.lesson.next) %>
-
+	
 <% if @video.lesson.videos.length > 1 %>
-<p>Alternaive Videos for <%= @video.lesson.name %> <%= link_to "Learn more about our Alternaive Videos", "#" %></p>
-<%= @video.lesson.videos.each do |v| %>
-  <% if v.id != @video.id %>
-    <%= link_to image_tag (v.thumbnail_url), lesson_video_path(@video.lesson, v) %>
-  <% end %>
-<% end %>
-<% end %>
-
-<p><%= link_to "Course Details", course_path(@video.lesson.course) %></p>
-
-<%= link_to 'Lesson Details', lesson_path(@video.lesson) %>
-
-
 
 	<div class="span-24" id="bottom-left">
+	
 		<h3> This Lesson by Other Users: </h3>
+	
 		<div class="span-24" id="bottom-left-course">
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image1.jpg" alt="Big Boat" />
-				<a href="url">Bob's take'</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image2.jpg" alt="Big Boat" />
-				<a href="url">Linda's take #1</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image3.jpg" alt="Big Boat" />
-				<a href="url">Great Video #1</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image1.jpg" alt="Big Boat" />
-				<a href="url">Great Video #1</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image2.jpg" alt="Big Boat" />
-				<a href="url">Great Video #1</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image3.jpg" alt="Big Boat" />
-				<a href="url">Great Video #1</a>
-			</div>
-			<div class="span-3" id="bottom-left-lesson">
-				<img src="images/youtube/image1.jpg" alt="Big Boat" />
-				<a href="url">Great Video #1</a>
-			</div>
+
+			<% @video.lesson.videos.each do |v| %>
+				  <% if v.id != @video.id %>
+				
+				<div class="span-3" id="bottom-left-lesson">
+					<%= link_to image_tag (v.thumbnail_url), lesson_video_path(@video.lesson, v) %>
+					<a href="url">Bob's take'</a>
+				</div>
+				<% end %>
+			
+			<% end %>
 		</div>
 	</div>
 
-	
+	<% end %>	
 </div>

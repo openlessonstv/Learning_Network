@@ -161,6 +161,7 @@
 }
 
 #header {
+	background-image: url('../images/yellow.gif'); 
 	height: 100px;
 	background-repeat:repeat-x;
 }

@@ -6892,3 +6892,179 @@ ActiveRecord::RecordNotFound (Couldn't find Lesson with ID=14):
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.1ms)
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 01 12:23:18 +0800 2011
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (31.0ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Rendered pages/home.html.erb within layouts/application (212.3ms)
+Completed 200 OK in 964ms (Views: 962.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at Sun May 01 12:23:34 +0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/css/home.css" for 127.0.0.1 at Sun May 01 12:23:34 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/css/sticky-footer.css" for 127.0.0.1 at Sun May 01 12:23:34 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at Sun May 01 12:23:44 +0800 2011
+  Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (90.5ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) LIMIT 1[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) LIMIT 1
+Rendered courses/_course.html.erb (132.0ms)
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Rendered courses/index.html.erb within layouts/application (2185.9ms)
+Completed 200 OK in 2983ms (Views: 2254.1ms | ActiveRecord: 91.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at Sun May 01 12:23:50 +0800 2011
+  Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) LIMIT 1[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) LIMIT 1
+Rendered courses/_course.html.erb (41.0ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (13.9ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered courses/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 82ms (Views: 73.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/css/home.css" for 127.0.0.1 at Sun May 01 12:23:51 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at Sun May 01 12:23:51 +0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/css/sticky-footer.css" for 127.0.0.1 at Sun May 01 12:23:51 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at Sun May 01 12:23:58 +0800 2011
+  Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) LIMIT 1[0m
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) LIMIT 1
+Rendered courses/_course.html.erb (23.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Rendered courses/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 49ms (Views: 40.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at Sun May 01 12:23:58 +0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/css/home.css" for 127.0.0.1 at Sun May 01 12:23:59 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/css/sticky-footer.css" for 127.0.0.1 at Sun May 01 12:23:59 +0800 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/lessons/1" for 127.0.0.1 at Sun May 01 12:24:03 +0800 2011
+  Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = 1 LIMIT 1
+  [1m[36mVideo Load (13.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc LIMIT 1[0m
+Redirected to http://localhost:3000/lessons/1/videos/4
+Completed 302 Found in 151ms
+
+
+Started GET "/lessons/1/videos/4" for 127.0.0.1 at Sun May 01 12:24:03 +0800 2011
+  Processing by VideosController#show as HTML
+  Parameters: {"lesson_id"=>"1", "id"=>"4"}
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = 4 ORDER BY popularity desc LIMIT 1
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = 1 LIMIT 1[0m
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."id" = 1 LIMIT 1
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) ORDER BY id desc[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1)
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc[0m
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered videos/show.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 76ms (Views: 66.8ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at Sun May 01 12:24:03 +0800 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/lessons/1/videos/css/sticky-footer.css" for 127.0.0.1 at Sun May 01 12:24:03 +0800 2011
+
+ActionController::RoutingError (No route matches "/lessons/1/videos/css/sticky-footer.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/lessons/1/videos/css/home.css" for 127.0.0.1 at Sun May 01 12:24:03 +0800 2011
+
+ActionController::RoutingError (No route matches "/lessons/1/videos/css/home.css"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

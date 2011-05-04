@@ -1,1 +1,7 @@
-<p><%= lesson.name %> | <%= link_to "Show", lesson_path(lesson) %> <!--| <%= link_to "Upload Video", new_lesson_video_path(lesson) %>--></p>
+
+<!--| <%= link_to "Upload Video", new_lesson_video_path(lesson) %>--></p>
+
+<div class="span-3" id="bottom-left-lesson">
+	<%= link_to image_tag (lesson.videos.first.thumbnail_url), lesson_path(lesson) %>
+	<%= link_to lesson.name, lesson_path(lesson) %>
+</div>

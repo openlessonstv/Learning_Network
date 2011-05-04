@@ -41,7 +41,7 @@
 			<div class="span-5 last">
 				<ul id="nav">
 					<li>
-						<h1><a href="#">23/45</a></h1>
+						<h1><a href="#"><%= @video.lesson.number.to_s + "/" + @video.lesson.course.lessons.count.to_s %> </a></h1>
 						<ul>
 							<% @course.lessons.each do |v| %>
 							<li><%= link_to (truncate(v.name, :length =>30)), v %></li>
@@ -73,9 +73,13 @@
 			<% end %>
 		</div>
 		
-		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=148282195232426&amp;xfbml=1"></script><fb:comments href=<%= @video.url %> num_posts="20" width="600"></fb:comments>
 		
 	</div>
 
-	<% end %>	
+<% end %>
+
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=148282195232426&amp;xfbml=1"></script><fb:comments href=<%= @video.url %> num_posts="20" width="600"></fb:comments>
+
+
+	
 </div>

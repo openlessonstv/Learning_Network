@@ -11,6 +11,19 @@ class Lesson < ActiveRecord::Base
     end
     return nil
   end
+  
+  def number
+      x=1
+      course.lessons.each do |lesson|
+        if lesson.id == self.id
+          return x
+          break
+        else 
+          x +=1
+        end
+      end
+      return nil
+    end
 
   def previous
     course.lessons.order('id desc').each do |l|

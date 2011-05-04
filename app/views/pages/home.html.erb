@@ -1,74 +1,61 @@
-<head>
-	<!-- STEP ONE: Insert this code into the HEAD section of your HTML document  -->
 
-		
-</head>
-
-<body>		
-			<div class="container" >
-		
-				<div class="span-24" id="home-sign-up-column">
-					<div class="span-14">
-						<h2>The best way to learn something better </h2>
-						<h1> is to <font color="red">teach</font> it to someone else. </h1>
-						<p> OpenLessons.tv is an interactive social learning place where you can pick up courses from other knowledgeable experts through videos.</p> 
-					</div>
-					<div class="span-10 last" >
-						<div id="home-signup-position">
-							<%= link_to image_tag('/images/home/signup.png', :onmouseover=>"this.src='/images/home/signup2.png'", :onmouseout=>"this.src=''/images/home/signup2.png'", :class=>"arrow", :id =>"right-arrow"), sign_up_path  %>						
-						</div>
-					</div>
-				<div>
-			
-				<div class="span-24" id="home-blue-banner-column">
-					<div class="span-7">
-						<h4> What you can do at OpenLessons.tv </h4>
-						<div class="Feature-buttons" style="float-left">
-							<div class="feature-buttons-i"><img src="images/btn_learn.png" alt="Big Boat" /></div>
-							<div class="feature-buttons-i"><img src="images/btn_teach.png" alt="Big Boat" /></div>
-							<div class="feature-buttons-i"><img src="images/btn_interact.png" alt="Big Boat" /></div>
-						
-						</div>
-						
-					</div>
-					<div class="span-17 last" >
-						<div class="span-3">
-							<div id="monsterlearn-position">
-								<img src="images/monsterNerd.png" alt="Big Boat" />
-							</div>
-						</div>
-						<div class="span-14 last">
-							<h3> Learn </h3>
-							<p> Our friendly community provides fun videos unlike your conventional lecturers.  Find alternative ways to pick up specific topics you've always wanted to learn more about.  This is a place to start. </p>
-						</div>
-					</div>
-				</div>
-				<div class="span-24" id="bottom-content">
-					<div class="span-11" id="bottom-left">
-						<h3> Check out the Most Popular Classes! </h3>
-							
-							<% Course.all.each do |c| %>
-							<div class="span-11" id="bottom-left-course">
-									<h4> <%= c.name %> </h4>
-										<% c.lessons.all.each do |l| %>
-										<% v= l.videos.first%>
-										<div class="span-3" id="bottom-left-lesson">
-												<%= link_to image_tag (v.thumbnail_url), lesson_video_path(l, v) %>
-												<%= link_to l.name, lesson_video_path( v, l) %>
-										</div>
-										<% end %>
-								</div>
-							<% end %>
-
-			
-					</div>
-					<div class="span-13 last">
-						<div id="youtube-position">
-<object width="425" height="349"><param name="movie" value="http://www.youtube.com/v/-w5YDMCr-jI?fs=1&hl=en_US&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/-w5YDMCr-jI?fs=1&hl=en_US&rel=0" type="application/x-shockwave-flash" width="425" height="349" allowscriptaccess="always" allowfullscreen="true"></embed></object>						</div>
-					</div>
-				</div>
-			</div>
-
+<div class="span-24"  id="home-sign-up-column">
+	<div class="span-14">
+		<h2>The best way to learn something better </h2>
+		<h1> is to <font color="red">teach</font> it to someone else. </h1>
+		<p> OpenLessons.tv is an interactive social learning place where you can pick up courses from other knowledgeable experts through videos.</p> 
+	</div>
+	<div class="span-10 last" >
+		<div id="home-signup-position">
+			<%= link_to image_tag('/images/home/signup.png', :onmouseover=>"this.src='/images/home/signup2.png'", :onmouseout=>"this.src='/images/home/signup.png'"), sign_up_path  %>						
 		</div>
-<body>
+	</div>
+</div>
+
+<div class="span-24" id="home-blue-banner-column">
+	<div class="span-7">
+		<h4> What you can do at OpenLessons.tv </h4>
+		<div class="Feature-buttons" style="float-left">
+			<div class="feature-buttons-i"><img src="images/btn_learn.png" alt="Big Boat" /></div>
+			<div class="feature-buttons-i"><img src="images/btn_teach.png" alt="Big Boat" /></div>
+			<div class="feature-buttons-i"><img src="images/btn_interact.png" alt="Big Boat" /></div>
+		
+		</div>
+		
+	</div>
+	<div class="span-17 last" >
+		<div class="span-3">
+			<div id="monsterlearn-position">
+				<img src="images/monsterNerd.png" alt="Big Boat" />
+			</div>
+		</div>
+		<div class="span-14 last">
+			<h3> Learn </h3>
+			<p> Our friendly community provides fun videos unlike your conventional lecturers.  Find alternative ways to pick up specific topics you've always wanted to learn more about.  This is a place to start. </p>
+		</div>
+	</div>
+</div>
+<div class="span-24" id="bottom-content">
+	<div class="span-11" id="bottom-left">
+		<h3> Check out the Most Popular Classes! </h3>
+			
+			<% Course.all.each do |c| %>
+				<div class="span-11" id="bottom-left-course">
+						<h4> <%= c.name %> </h4>
+							<% c.lessons.all.each do |l| %>
+							<% v= l.videos.first%>
+							<div class="span-3" id="bottom-left-lesson">
+									<%= link_to image_tag (v.thumbnail_url), lesson_video_path(l, v) %>
+									<%= link_to l.name, lesson_video_path( v, l) %>
+							</div>
+							<% end %>
+				</div>
+			<% end %>
+	</div>
+	<div class="span-13 last">
+		<div id="youtube-position">
+			<object width="425" height="349"><param name="movie" value="http://www.youtube.com/v/-w5YDMCr-jI?fs=1&hl=en_US&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/-w5YDMCr-jI?fs=1&hl=en_US&rel=0" type="application/x-shockwave-flash" width="425" height="349" allowscriptaccess="always" allowfullscreen="true"></embed></object>	
+		</div>
+	</div>
+</div>
 

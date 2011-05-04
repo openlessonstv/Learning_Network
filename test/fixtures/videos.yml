@@ -16,7 +16,7 @@ two:
   description: God Lies in Preperation
   popularity: 6
   lesson_id: 2
-  user_id: 2
+  user_id: 1
 
 three:
   id: 3
@@ -34,7 +34,7 @@ four:
   description: Practice to win and Play big
   popularity: 
   lesson_id: 3
-  user_id: 3
+  user_id: 2
 
 five:
   id: 5
@@ -43,7 +43,7 @@ five:
   description: Practice with a big heart
   popularity: 1
   lesson_id: 3
-  user_id: 3
+  user_id: 2
 
 six:
   id: 6
@@ -52,4 +52,40 @@ six:
   description: Breathe
   popularity: 1
   lesson_id: 4
+  user_id: 2
+
+seven:
+  id: 7
+  youtube_id: x1L8y-MX3pg&NR=1
+  title: Embracing and Overcoming nervousness
+  description: Inspirationl video from Martin Luther King 
+  popularity: 1
+  lesson_id: 1
+  user_id: 2
+
+eight:
+  id: 8
+  youtube_id: ouRbkBAOGEw
+  title: Engage your Audience
+  description: Inspirational video from John F Kennedy
+  popularity: 1
+  lesson_id: 5
+  user_id: 3
+
+nine:
+  id: 9
+  youtube_id: wwdmebQwScA
+  title: Engage your Audience
+  description: Inspirational video from Martin Luther King
+  popularity: 1
+  lesson_id: 5
+  user_id: 3
+
+ten:
+  id: 10
+  youtube_id: UF8uR6Z6KLc
+  title: Engage Your Audience
+  description: Inspirational speech from Steve jobs
+  popularity: 1
+  lesson_id: 5
   user_id: 3

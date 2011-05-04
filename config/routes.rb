@@ -1,5 +1,7 @@
 Ol::Application.routes.draw do
   root :to => "pages#home"
+  get "pages/about"
+  match '/about',   :to => 'pages#about'
   resources :users
   resources :courses
   resources :lessons do

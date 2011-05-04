@@ -14,6 +14,18 @@ two:
 
 three:
   id: 3
-  name: Lesson 1 Practice
+  name: Lesson 3 Practice
   description: Power of Practice C
+  course_id : 1
+
+four:
+  id: 4
+  name: Lesson 4 Breathe!!
+  description: Power of Breathing while Speaking!!! 
+  course_id : 1
+
+five:
+  id: 5
+  name: Lesson 5 Engaging your audience!!
+  description: Engaging your audience!!! 
   course_id : 1

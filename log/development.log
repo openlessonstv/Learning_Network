@@ -25621,3 +25621,39 @@ ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/courses" for 192.168.0.207 at Wed May 04 15:50:44 +0700 2011
+  Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (1.6ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1
+Rendered courses/_course.html.erb (134.1ms)
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered courses/index.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 185ms (Views: 169.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 04 15:50:45 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/css/home.css" for 192.168.0.207 at Wed May 04 15:50:45 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/css/sticky-footer.css" for 192.168.0.207 at Wed May 04 15:50:45 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)

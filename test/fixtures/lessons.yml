@@ -2,19 +2,19 @@
 
 one:
   id: 1
-  name: Lesson 1 Overcoming Nervousness
+  name: Lesson 1 Nerves Get the Better
   description: Learn to relax and be a master!
   course_id: 1
 
 two:
   id: 2
-  name: Lesson 2 Preperation
+  name: Lesson 2 Preperation is key to sucess
   description: God Lies in Preperation!
   course_id : 1
 
 three:
   id: 3
-  name: Lesson 3 Practice
+  name: Lesson 3 Overcoming 
   description: Power of Practice C
   course_id : 1
 

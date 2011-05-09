@@ -1,6 +1,14 @@
-#home-blue-banner-column h3{
-margin-bottom:0.2em;
+/* @override 
+	http://localhost:3000/stylesheets/home.css?1304878418
+	http://localhost:3000/css/home.css
+	http://localhost:3000/lessons/1/videos/css/home.css
+	http://localhost:3000/stylesheets/home.css?1304879816
+	http://localhost:3000/stylesheets/home.css?1304879984
+*/
+
+#facebook{
 }
+
 
 /* @group Project */
 
@@ -24,7 +32,7 @@ margin-bottom:0.2em;
 }
 
 #video-sidebar h1 {
-	font-size: 1.8em;
+	font-size: 2em;
 	color: orange;
 	margin-bottom: 0.15em;
 	margin-top: 0.4em;
@@ -81,26 +89,28 @@ margin-bottom:0.2em;
 #nav{
 
 	float:left;
-	width:20%;
 	list-style:none;
 	font-weight:bold;
-	margin-bottom:0px;
 	margin-left:-20px;
 	
 }
 #nav li{
 	float:left;
-	margin-right:5px;
 	position:relative;
 	display:block;
-}
-#nav li a{
-	color:#fff;
-	border-radius:0.1em;
-	padding: 1px 3px 1px 3px;
 	background: #ff9058;
+	margin: 0;
+	border-radius:0.2em;
+}
+#nav li h1 a{
+	color:#fff;
 	text-decoration:none;
-
+	font-size: 1.5em;
+	position: relative;
+	top: -2px;
+	
+	line-height:0.8em;
+	
 }
 #nav li a:hover{
 	color:#fff;
@@ -115,7 +125,7 @@ margin-bottom:0.2em;
 	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
 	opacity:0; /* Set initial state to transparent */
 	-webkit-transition:0.25s linear opacity; /* Make the dropdown fade-in in Webkit */
-	width:110px;
+	width:200px;
 	border-radius:0.1em;
 	margin-left:0;
 	
@@ -170,7 +180,18 @@ margin-bottom:0.2em;
 	background-repeat:repeat-x;
 }
 
+.header-links{
+	float: right;
+	margin-top: 2.4em;
+}
 
+.header-links a{
+	text-decoration: none;
+	color: black;
+}
+.header-links a:hover{
+	text-decoration: underline;
+}
 
 /* @end */
 
@@ -192,7 +213,7 @@ margin-top: 2em;
 
 #bottom-left h3{
 	margin-left: 0.8em;
-	margin-bottom: 0.5em;
+	margin-bottom: 1.3em;
 	margin-top: 1em;
 	color: #98110b; 
 
@@ -208,12 +229,13 @@ margin-top: 2em;
 #bottom-left-course h4{
 	margin-bottom: 0.3em;
 	font-weight: bold;
-	color: darkorange;
+	color: #98110b; 
 	
 }
 
 #bottom-left-lesson {
 	margin-right: 1.9em;
+	height: 140px;
 }
 #bottom-left-lesson a{
 	
@@ -236,9 +258,28 @@ margin-top: 2em;
 	margin-bottom: 0.6em;
 }
 
+.feature-button {
+	margin-right: 2em;
+}
+#home-blue-banner-column h3{
+margin-bottom:0.2em;
+font-size: 2.4em;
+font-weight: bold;
+	font-family:  Arial Rounded MT Bold;
+
+}
+#home-blue-banner-column p{
+margin-bottom:0.2em;
+font-size: 1.2em;
+
+}
+
 #home-blue-banner-column {
 padding:1em;
     background: -webkit-gradient(linear, left top, left bottom, from(#cee4ff), to(#9fa2ff));
+ background: -moz-linear-gradient(top, #cee4ff, #9fa2ff);
+     border-radius:0.5em;
+    moz-border-radius:0.5em;
 }
 
 #home-blue-banner-column h4{

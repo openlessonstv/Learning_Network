@@ -1,3 +1,39 @@
+<head>
+	<script type="text/javascript" charset="utf-8">
+	$(function(){ 
+		$("#learn").click(function(){
+			$("#change-box").fadeOut("fast", function(){
+				$("#change-box").empty();
+				$("#change-box").append("<h3> Learn </h3><p> Our friendly community provides fun videos unlike your conventional lecturers.  Find alternative ways to pick up specific topics you've always wanted to learn more about.  This is a place to start. </p> ");
+				$("#change-box").fadeIn("fast");					
+			});
+			return false;
+		})
+	})
+	
+	$(function(){ 
+		$("#teach").click(function(){
+			$("#change-box").fadeOut("fast", function(){
+				$("#change-box").empty();
+				$("#change-box").append("<h3> Teach </h3><p> The best way to learn is to teach.  At Openlessons.tv, anyone can teach anything.  Pick a lesson, film yourself teaching it, upload to Youtube, and give us the URL.  Then watch the community respond. </p> ");
+				$("#change-box").fadeIn("fast");					
+			});
+			return false;
+		})
+	})
+	
+	$(function(){ 
+		$("#interact").click(function(){
+			$("#change-box").fadeOut("fast", function(){
+				$("#change-box").empty();
+				$("#change-box").append("<h3> Interact </h3><p> Select only the best.  You have the power to vote on your favorite teachers for each lesson. Use it wisely.  Also, discuss your thoughts and questions under each video.  </p> ");
+				$("#change-box").fadeIn("fast");
+			});
+			return false;
+		})
+	})
+	</script>
+</head>
 
 <div class="span-24"  id="home-sign-up-column">
 	<div class="span-14">
@@ -15,13 +51,12 @@
 <div class="span-24" id="home-blue-banner-column">
 	<div class="span-7">
 		<h4> What you can do at OpenLessons.tv </h4>
-		<div class="Feature-buttons" style="float-left">
-			<div class="feature-buttons-i"><img src="images/btn_learn.png" alt="Big Boat" /></div>
-			<div class="feature-buttons-i"><img src="images/btn_teach.png" alt="Big Boat" /></div>
-			<div class="feature-buttons-i"><img src="images/btn_interact.png" alt="Big Boat" /></div>
-		
+		<div class="Feature-buttons">
+			<%= link_to image_tag('btn_learn.png'), url="http/:google.com",  :id => "learn", :class=>"feature-button" %>
+			<%= link_to image_tag('btn_teach.png'), url="http/:google.com",  :id => "teach", :class=>"feature-button" %>
+			<%= link_to image_tag('btn_interact.png'), url="http/:google.com",  :id => "interact", :class=>"feature-button" %>
 		</div>
-		
+
 	</div>
 	<div class="span-17 last" >
 		<div class="span-3">
@@ -29,7 +64,7 @@
 				<img src="images/monsterNerd.png" alt="Big Boat" />
 			</div>
 		</div>
-		<div class="span-14 last">
+		<div class="span-14 last" id="change-box">
 			<h3> Learn </h3>
 			<p> Our friendly community provides fun videos unlike your conventional lecturers.  Find alternative ways to pick up specific topics you've always wanted to learn more about.  This is a place to start. </p>
 		</div>
@@ -38,19 +73,21 @@
 <div class="span-24" id="bottom-content">
 	<div class="span-11" id="bottom-left">
 		<h3> Check out the Most Popular Classes! </h3>
-			
+
 			<% Course.all.each do |c| %>
 				<div class="span-11" id="bottom-left-course">
+					
 						<h4> <%= c.name %> </h4>
 							<% c.lessons.all.each do |l| %>
 							<% v= l.videos.first%>
 							<div class="span-3" id="bottom-left-lesson">
 									<%= link_to image_tag (v.thumbnail_url), lesson_video_path(l, v) %>
-									<%= link_to l.name, lesson_video_path( v, l) %>
+									<%= link_to truncate(l.name, :length => 20), lesson_video_path( v, l) %>
 							</div>
 							<% end %>
 				</div>
 			<% end %>
+
 	</div>
 	<div class="span-13 last">
 		<div id="youtube-position">

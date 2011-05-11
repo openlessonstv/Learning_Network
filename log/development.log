@@ -72840,3 +72840,286 @@ Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:07
 ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
   
 
+
+
+Started GET "/courses" for 192.168.0.207 at Wed May 11 14:20:58 +0700 2011
+  Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (1.5ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "lessons" WHERE ("lessons".course_id = 1)
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "lessons" WHERE ("lessons".course_id = 2)
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "lessons" WHERE ("lessons".course_id = 3)
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) LIMIT 1[0m
+Rendered courses/_course.html.erb (42.7ms)
+Rendered layouts/_stylesheets.html.erb (2.6ms)
+Rendered layouts/_header.html.erb (2.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered courses/index.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 97ms (Views: 78.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 11 14:20:58 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+
+
+Started GET "/css/home.css" for 192.168.0.207 at Wed May 11 14:20:58 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+
+
+Started GET "/css/sticky-footer.css" for 192.168.0.207 at Wed May 11 14:20:58 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:20:58 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/courses/1" for 192.168.0.207 at Wed May 11 14:21:11 +0700 2011
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "lessons" WHERE ("lessons".course_id = 1)[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) LIMIT 1
+Rendered courses/_course.html.erb (124.1ms)
+  [1m[36mLesson Load (0.6ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 1)
+  [1m[36mVideo Load (0.6ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (3.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 2)
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 2) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 3)
+  [1m[36mVideo Load (1.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 3) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 4)
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 4) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 5)
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 5) ORDER BY popularity desc LIMIT 1[0m
+Rendered lessons/_lesson.html.erb (65.3ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered courses/show.html.erb within layouts/application (225.0ms)
+Completed 200 OK in 250ms (Views: 225.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 11 14:21:11 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+
+
+Started GET "/courses/css/sticky-footer.css" for 192.168.0.207 at Wed May 11 14:21:11 +0700 2011
+
+ActionController::RoutingError (No route matches "/courses/css/sticky-footer.css"):
+  
+
+
+
+Started GET "/courses/css/home.css" for 192.168.0.207 at Wed May 11 14:21:11 +0700 2011
+
+ActionController::RoutingError (No route matches "/courses/css/home.css"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:21:11 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/" for 192.168.0.207 at Wed May 11 14:29:00 +0700 2011
+  Processing by PagesController#home as HTML
+  [1m[36mCourse Load (2.5ms)[0m  [1mSELECT "courses".* FROM "courses" ORDER BY id[0m
+  [1m[35mLesson Load (0.6ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) ORDER BY id
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 1)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 2)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 2) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 3)[0m
+  [1m[35mVideo Load (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 3) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 4)[0m
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 4) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 5)[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 5) ORDER BY popularity desc LIMIT 1
+  [1m[36mLesson Load (0.5ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) ORDER BY id[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 6)
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 6) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 7)
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 7) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) ORDER BY id
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 8)[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 8) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 9)[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 9) ORDER BY popularity desc LIMIT 1
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+Rendered layouts/_header.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered pages/home.html.erb within layouts/application (355.0ms)
+Completed 200 OK in 366ms (Views: 352.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 11 14:29:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+
+
+Started GET "/css/home.css" for 192.168.0.207 at Wed May 11 14:29:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+
+
+Started GET "/css/sticky-footer.css" for 192.168.0.207 at Wed May 11 14:29:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:29:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/" for 192.168.0.207 at Wed May 11 14:29:22 +0700 2011
+  Processing by PagesController#home as HTML
+  [1m[36mCourse Load (1.0ms)[0m  [1mSELECT "courses".* FROM "courses" ORDER BY id[0m
+  [1m[35mLesson Load (0.8ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) ORDER BY id desc
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 5)[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 5) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 4)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 4) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 3)[0m
+  [1m[35mVideo Load (3.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 3) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 2)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 2) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 1)[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc LIMIT 1
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) ORDER BY id desc[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 7)
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 7) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 6)
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 6) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) ORDER BY id desc
+  [1m[36mSQL (2.2ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 9)[0m
+  [1m[35mVideo Load (3.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 9) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 8)[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 8) ORDER BY popularity desc LIMIT 1
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered pages/home.html.erb within layouts/application (200.1ms)
+Completed 200 OK in 211ms (Views: 191.2ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 11 14:29:22 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+
+
+Started GET "/css/home.css" for 192.168.0.207 at Wed May 11 14:29:22 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+
+
+Started GET "/css/sticky-footer.css" for 192.168.0.207 at Wed May 11 14:29:22 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:29:22 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/" for 192.168.0.207 at Wed May 11 14:29:39 +0700 2011
+  Processing by PagesController#home as HTML
+  [1m[36mCourse Load (3.4ms)[0m  [1mSELECT "courses".* FROM "courses" ORDER BY id[0m
+  [1m[35mLesson Load (0.8ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 1) ORDER BY id
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 1)[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 1) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 2)[0m
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 2) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 3)[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 3) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 4)[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 4) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 5)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 5) ORDER BY popularity desc LIMIT 1
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 2) ORDER BY id[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 6)
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 6) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 7)
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 7) ORDER BY popularity desc LIMIT 1[0m
+  [1m[35mLesson Load (0.4ms)[0m  SELECT "lessons".* FROM "lessons" WHERE ("lessons".course_id = 3) ORDER BY id
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 8)[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 8) ORDER BY popularity desc LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE ("videos".lesson_id = 9)[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE ("videos".lesson_id = 9) ORDER BY popularity desc LIMIT 1
+Rendered layouts/_stylesheets.html.erb (2.5ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered pages/home.html.erb within layouts/application (157.4ms)
+Completed 200 OK in 170ms (Views: 156.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/css/sticky-footer.css" for 192.168.0.207 at Wed May 11 14:29:39 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/sticky-footer.css"):
+  
+
+
+
+Started GET "/stylesheets/application.css" for 192.168.0.207 at Wed May 11 14:29:40 +0700 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+
+
+Started GET "/css/home.css" for 192.168.0.207 at Wed May 11 14:29:40 +0700 2011
+
+ActionController::RoutingError (No route matches "/css/home.css"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:29:40 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/javascripts/jquery.rails.js" for 192.168.0.207 at Wed May 11 14:29:40 +0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+

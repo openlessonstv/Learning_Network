@@ -7,7 +7,7 @@ one:
   youtube_id: VCJ7utfGruE
   title: Overcome and Embrace your Nervousness
   description: Harness Nervous Energy to your advantage
-  popularity: 1
+  popularity: 2
   lesson_id: 1
   user_id: 1
 
@@ -16,7 +16,7 @@ two:
   youtube_id: Km3bTvxiqL8
   title: Prepare  Prepare Prepare!!!
   description: God Lies in Preperation
-  popularity: 2
+  popularity: 3
   lesson_id: 2
   user_id: 1
 
@@ -34,7 +34,7 @@ four:
   youtube_id: c6ULGVlw4rg
   title: Love Practice 
   description: Practice to win and Play big
-  popularity: 
+  popularity: 1
   lesson_id: 3
   user_id: 2
 
@@ -43,7 +43,7 @@ five:
   youtube_id: 96fPAPYH-ZY
   title: Practice with a big heart
   description: Practice with a big heart
-  popularity: 1
+  popularity: 2
   lesson_id: 3
   user_id: 2
 
@@ -79,7 +79,7 @@ nine:
   youtube_id: wwdmebQwScA
   title: Engage your Audience
   description: Inspirational video from Martin Luther King
-  popularity: 1
+  popularity: 2
   lesson_id: 5
   user_id: 3
 

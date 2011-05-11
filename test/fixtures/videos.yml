@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
+x1L8y-MX3pg&NR=1
+
 one:
   id: 1
   youtube_id: VCJ7utfGruE
   title: Overcome and Embrace your Nervousness
   description: Harness Nervous Energy to your advantage
-  popularity: 9
+  popularity: 1
   lesson_id: 1
   user_id: 1
 
@@ -14,7 +16,7 @@ two:
   youtube_id: Km3bTvxiqL8
   title: Prepare  Prepare Prepare!!!
   description: God Lies in Preperation
-  popularity: 6
+  popularity: 2
   lesson_id: 2
   user_id: 1
 
@@ -23,7 +25,7 @@ three:
   youtube_id: IepTiFyqFco
   title: Preparation
   description: Preparation for Speech
-  popularity: 4
+  popularity: 2
   lesson_id: 2
   user_id: 2
 
@@ -56,18 +58,18 @@ six:
 
 seven:
   id: 7
-  youtube_id: x1L8y-MX3pg&NR=1
+  youtube_id: LONQe3843_4
   title: Embracing and Overcoming nervousness
-  description: Inspirationl video from Martin Luther King 
+  description: Interesting video from Ken 
   popularity: 1
   lesson_id: 1
   user_id: 2
 
 eight:
   id: 8
-  youtube_id: ouRbkBAOGEw
+  youtube_id: MrEf6gVMPa4
   title: Engage your Audience
-  description: Inspirational video from John F Kennedy
+  description: How to engage the audience!
   popularity: 1
   lesson_id: 5
   user_id: 3
@@ -83,9 +85,72 @@ nine:
 
 ten:
   id: 10
-  youtube_id: UF8uR6Z6KLc
+  youtube_id: UG2Y_ff23QQ
   title: Engage Your Audience
-  description: Inspirational speech from Steve jobs
+  description: 
   popularity: 1
   lesson_id: 5
   user_id: 3
+
+eleven:
+  id: 11
+  youtube_id: 3mQjtk2YDkM
+  title: Understanding Models in Rails 3
+  description: lynda.com Tutorial | Ruby on Rails 3 Essential Training—Understanding MVC Architecture
+  popularity: 1
+  lesson_id: 6
+  user_id: 1
+
+twelve:
+  id: 12
+  youtube_id: _7vsWj25ma0
+  title: Models in Rails 3
+  description: Another way to look at models in Rails 3
+  popularity: 1
+  lesson_id: 6
+  user_id: 1
+
+thirteen:
+  id: 13
+  youtube_id: 4EwAZx29Esw
+  title: Models in Rails 3
+  description: Yet another way to look at models in Rails 3
+  popularity: 1
+  lesson_id: 6
+  user_id: 1
+
+fourteen:
+  id: 14
+  youtube_id: FnUC1zjV9og
+  title: Controllers in Rails 3
+  description: A look at Rails 3 controllers
+  popularity: 1
+  lesson_id: 7
+  user_id: 1
+
+fifteen:
+  id: 15
+  youtube_id: 6zboHmo2mSQ
+  title: Data types in Python
+  description: A look at Python data types
+  popularity: 1
+  lesson_id: 8
+  user_id: 1
+
+sixteen:
+  id: 16
+  youtube_id: HuFRHckAiI0
+  title: Data types study in Python
+  description: Another look at Python data types
+  popularity: 1
+  lesson_id: 8
+  user_id: 1
+
+seventeen:
+  id: 17
+  youtube_id: Q3T1yyGQd6o
+  title: Loops in Python
+  description: Another look at Python data types
+  popularity: 1
+  lesson_id: 9
+  user_id: 1

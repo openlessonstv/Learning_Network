@@ -11,4 +11,16 @@ class Video < ActiveRecord::Base
   def thumbnail_url
     return "http://img.youtube.com/vi/#{youtube_id}/1.jpg"
   end
+
+  def voteup
+    self.popularity = popularity + 1
+    save
+  end
+
+  def votedown
+    if popularity > 0
+      self.popularity = popularity - 1
+      save
+    end
+  end
 end

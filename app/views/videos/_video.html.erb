@@ -1,1 +1,8 @@
-<p><%= image_tag video.thumbnail_url %></p>
+<div>
+  <b><%= video.title %></b><br />
+  <%= image_tag video.thumbnail_url %><br />
+  <% if signed_in? && current_user.is_admin? %>
+  <%= link_to "Edit Video", edit_lesson_video_path(video.lesson, video) %>
+  <%= button_to "Delete Video", { :action => "destroy", :id => video.id }, :confirm => "Are you sure?", :method => :delete %>
+  <% end %>
+</div>

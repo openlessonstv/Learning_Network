@@ -1,16 +1,74 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Password: Learning123 (Ozzie_Gooen@hmc.edu)
 
 one:
   id: 1
-  name: Darren
-  email: darren@sw.com
+  name: Darren Jensen
+  email: darren.jensen@gmail.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f710
+  is_admin: true
 
 two:
   id: 2
-  name: John
-  email: john@sw.com
+  name: Ozzie Gooen
+  email: ozzie_gooen@hmc.edu
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f711
+  is_admin: true
 
 three:
   id: 3
-  name: Alan
-  email: alan@sw.com
+  name: Amelia Carys
+  email: ameliacarys@gmail.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f714
+  is_admin: true
+
+four:
+  id: 4
+  name: Alan Lam
+  email: alanlam@dolphnsix.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f716
+  is_admin: true
+
+five:
+  id: 5
+  name: David Lys
+  email: davidlys@gmail.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f718
+  is_admin: true
+
+six:
+  id: 6
+  name: Kaushank
+  email: kaushank@yahoo.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f720
+  is_admin: true
+
+seven:
+  id: 7
+  name: Dave Rogers
+  email: coachdaverogers@gmail.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f725
+  is_admin: true
+
+eight:
+  id: 8
+  name: Not Admin
+  email: notanadmin@gmail.com
+  encrypted_password: 7adc80ff5e5330eb0b75605ffdf6cf937e284b2c
+  salt: a67523868149f8c17b95f0deb1ae35465a29eec4
+  remember_token: cf1fabffa60645256e3b76dd79465d975df4f726
+  is_admin: false

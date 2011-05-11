@@ -43,7 +43,9 @@
 	</div>
 	<div class="span-10 last" >
 		<div id="home-signup-position">
+		  <% if ! signed_in? %>
 			<%= link_to image_tag('/images/home/signup.png', :onmouseover=>"this.src='/images/home/signup2.png'", :onmouseout=>"this.src='/images/home/signup.png'"), sign_up_path  %>						
+		  <% end %>
 		</div>
 	</div>
 </div>
@@ -79,11 +81,13 @@
 					
 						<h4> <%= c.name %> </h4>
 							<% c.lessons.all.each do |l| %>
-							<% v= l.videos.first%>
+							<% if l.videos.any? %>
+							<% v= l.videos.first %>
 							<div class="span-3" id="bottom-left-lesson">
 									<%= link_to image_tag (v.thumbnail_url), lesson_video_path(l, v) %>
-									<%= link_to truncate(l.name, :length => 20), lesson_video_path( v, l) %>
+									<%= link_to truncate(l.name, :length => 20), lesson_video_path( l, v) %>
 							</div>
+							<% end %>
 							<% end %>
 				</div>
 			<% end %>

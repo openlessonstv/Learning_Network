@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < Clearance::UsersController
   def show
     @title = User.name
     @user = User.find(params[:id])

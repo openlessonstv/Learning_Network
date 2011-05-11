@@ -8,6 +8,7 @@ class CreateDieselClearanceUsers < ActiveRecord::Migration
       t.string   :remember_token,     :limit => 128
       t.timestamps
       t.string :name
+      t.boolean :is_admin
     end
 
     add_index :users, :email

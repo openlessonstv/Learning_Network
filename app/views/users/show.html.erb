@@ -1,12 +1,14 @@
 <h1> Videos by <%=@user.name %> </h1>
 
 <% @user.videos.each do |v| %>
-		<div class="span-3" id="bottom-left-lesson">
-			<%= link_to image_tag (v.thumbnail_url), lesson_video_path(v.lesson, v) %>
-			<%= link_to v.lesson.name, lesson_video_path(v.lesson, v) %>
-		</div>
-	<% end %>
+<div class="span-3" id="bottom-left-lesson">
+  <%= link_to image_tag (v.thumbnail_url), lesson_video_path(v.lesson, v) %>
+  <%= link_to v.lesson.name, lesson_video_path(v.lesson, v) %>
+</div>
+<% end %>
 
-	
-	
-	
+<% if signed_in? && !current_user.is_admin? && @user.videos.empty? %>
+<h2>You have not contributed any videos yet. Here is how you can...</h2>
+<h3>The idea is simple. First you need to <%= link_to "watch a lesson", courses_path %> and click the link underneath the video to contribute your own version of the lesson! The community will decide if your leaching methods are worthy by voting your lesson up (or down!)</h3>
+<h3>So visit the <%= link_to "courses list page", courses_path %> now and get started!</h3>
+<% end %>

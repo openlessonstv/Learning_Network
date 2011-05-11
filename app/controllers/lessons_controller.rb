@@ -14,31 +14,35 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(params[:lesson])
 
     if @lesson.save
-      redirect_to(@lesson, :notice => 'Lesson was successfully created.')
+      redirect_to(@lesson.course, :notice => 'Lesson was successfully created.')
     else
       render :action => "new"
     end
   end
 
   def update
+    @lesson = Lesson.find(params[:id])
     if @lesson.update_attributes(params[:lesson])
-      flash[:success] = "Lesson updated."
-      redirect_to @lesson
+      redirect_to(@lesson.course, :notice => 'Lesson was successfully updated.')
     else
       @title = "Edit course"
-      render 'course'
     end
   end
 
   def destroy
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
+    redirect_to(@lesson.course, :notice => 'Lesson was successfully deleted.')
   end
 
 
   def show
     @lesson = Lesson.find(params[:id])
-    redirect_to lesson_video_path (@lesson, @lesson.videos.first)
+    if @lesson.videos.any?
+      redirect_to lesson_video_path (@lesson, @lesson.videos.first)
+    else
+      redirect_to (@lesson.course, :notice => "Lesson does not have any videos!")
+    end
   end
 
   def edit

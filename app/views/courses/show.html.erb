@@ -1,5 +1,5 @@
-<h1>Course</h1>
-<p><%= @course.name %></p>
-<%= link_to "Start Course!", lesson_path(@course.lessons.first) %>
+<%= render @course %>
+<h3><%= link_to "Create Lesson", new_lesson_path(:course_id => @course.id) %></h3>
+<h4><%= link_to "Back to courses", courses_path %></h4>
 <%= render @course.lessons %>
-<!--<p><%= link_to "Create Lesson", new_lesson_path(:course_id => @course.id) %></p>-->
+

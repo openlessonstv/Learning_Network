@@ -1,0 +1,6 @@
+<h2>Videos for <%= @lesson.name %></h2>
+<h4><%= link_to "Back to Course", course_path(@lesson.course) %></h4>
+<% if signed_in? && current_user.is_admin? %>
+<h3><%= link_to "Add Video", new_lesson_video_path(@lesson) %></h3>
+<% end %>
+<%= render @videos %>

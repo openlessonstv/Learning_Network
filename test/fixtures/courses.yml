@@ -6,3 +6,14 @@ one:
   description: A great course for speaking well!
   published: true
 
+two:
+  id: 2
+  name: Programming Rails 3 Applications
+  description: Learn how to build Rails 3 Applications
+  published: true
+
+three:
+  id: 3
+  name: Programming Python
+  description: Learn all about the Python Programming language
+  published: true

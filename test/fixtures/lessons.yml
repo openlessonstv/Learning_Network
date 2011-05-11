@@ -29,3 +29,27 @@ five:
   name: Lesson 5 Engaging your audience!!
   description: Engaging your audience!!! 
   course_id : 1
+
+six:
+  id: 6
+  name: ActiveRecord Models
+  description: ORM with ActiveRecord in Rails 3 
+  course_id : 2
+
+seven:
+  id: 7
+  name: Rails Controllers
+  description: Learn about Rails 3 Controllers
+  course_id : 2
+
+eight:
+  id: 8
+  name: Python Data Types
+  description: Introduction to data types in Python Programming
+  course_id : 3
+
+nine:
+  id: 9
+  name: Loops in Python
+  description: How to write a loop in Python
+  course_id : 3

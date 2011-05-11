@@ -1,1 +1,5 @@
+<h2>Courses</h2>
+<% if signed_in? && current_user.is_admin? %>
+<h3><%= link_to "Create Course", new_course_path %></h3>
+<% end %>
 <%= render @courses %>

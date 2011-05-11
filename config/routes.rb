@@ -7,6 +7,9 @@ Ol::Application.routes.draw do
   resources :lessons do
     resources :videos
   end
+
+  match 'videos/:id/voteup' => 'videos#voteup', :as => :voteup
+  match 'videos/:id/votedown' => 'videos#votedown', :as => :votedown
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

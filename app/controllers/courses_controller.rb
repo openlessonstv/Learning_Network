@@ -19,9 +19,10 @@ class CoursesController < ApplicationController
   end
 
   def update
+    @course = Course.find(params[:id])
+    
     if @course.update_attributes(params[:course])
-      flash[:success] = "Course updated."
-      redirect_to @course
+      redirect_to(@course, :notice => 'Course was successfully updated.')
     else
       @title = "Edit course"
       render 'course'
@@ -31,6 +32,7 @@ class CoursesController < ApplicationController
   def destroy
     @course = Course.find(params[:id])
     @course.destroy
+    redirect_to(courses_path, :notice => 'Course was successfully deleted.')
   end
 
 
